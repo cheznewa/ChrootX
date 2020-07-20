@@ -5,7 +5,7 @@
 #    installs fedora10 using rinse
 
 ID=`basename $1`
-rinse --arch amd64 --directory $1 --distribution fedora-core-10
+rinse --arch amd64 --directory $1 --distribution fedora-core-5
 
 # -- set hostname
 mkdir -p $1/etc; echo "${ID}" > $1/etc/hostname
