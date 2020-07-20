@@ -37,8 +37,8 @@ $conf->{root} = '/var/lib/chrootx';
 $conf->{chroot} = '/usr/sbin/chroot';
 $conf->{jchroot} = '/usr/sbin/jchroot';
 $conf->{size} = '4G';
-$conf->{format} = 'qcow2';
-$conf->{fs} = 'ext4';
+$conf->{format} = 'vdi';
+$conf->{fs} = 'btrfs';
 
 conf("/etc/chrootx.conf") if(-e "/etc/chrootx.conf");
 
