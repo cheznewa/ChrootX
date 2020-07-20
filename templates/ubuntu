@@ -50,7 +50,7 @@ fi
 
 echo "\tfetching ubuntu ${DIST}";
 
-debootstrap ${DIST} ${DIR} http://archive.ubuntu.com/ubuntu
+debootstrap ${DIST} ${DIR} http://old-releases.ubuntu.com/ubuntu
 
 # -- set hostname
 mkdir -p ${DIR}/etc; echo "${ID}" > ${DIR}/etc/hostname
