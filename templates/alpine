@@ -1,0 +1,9 @@
+V=$2
+cd $(mktemp -d)
+curl -s http://dl-cdn.alpinelinux.org/alpine/v${V}/releases/x86_64/alpine-minirootfs-${V}.0-x86_64.tar.gz | tar xzf -
+cp -r * $1
+DIR=$1
+ID=$(basename $1)
+mkdir -p $1/etc; echo "${ID}" > $1/etc/hostname
+echo "nameserver 8.8.8.8" > ${DIR}/etc/resolv.conf
+
