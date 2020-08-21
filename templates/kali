@@ -1,0 +1,21 @@
+#!/bin/sh
+
+# == Debian
+# written by Rene K. Mueller <spiritdude@gmail.com>
+#    installs debian, release name as argument (no number)
+# Modifier by Newa
+
+DIR=$1
+ID=`basename $1`
+
+
+echo "\tfetching kali";
+
+debootstrap kali-rolling ${DIR} http://http.kali.org/kali
+
+# -- set hostname
+mkdir -p ${DIR}/etc; echo "${ID}" > ${DIR}/etc/hostname
+#chroot ${DIR} /bin/sh -c "/bin/hostname ${ID}"
+
+echo "rootfs / rootfs rw 0 0" > ${DIR}/etc/mtab
+

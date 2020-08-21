@@ -3,7 +3,7 @@ NAME=ChrootX
 VERSION=0.0.7
 
 requirements::
-	apt-get install bash-static busybox-static debootstrap rinse qemu-utils
+	apt-get install bash-static busybox-static debootstrap rinse qemu-utils curl build-essential
 	cpan JSON DateTime Time::HiRes
 
 jchroot::
